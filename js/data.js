@@ -133,12 +133,12 @@ export const MOVES = {
   galichage: { name: "Galichage", type: "Eau", power: 24, accuracy: 0.92, effect: { buffSpeed: 1 }, text: "Snoopy embrasse goulument son adversaire" },
   ronflement: { name: "Ronflement", type: "Normal", power: 0, effect: { heal: 35 }, text: "Une sieste éclair qui rend des PV." },
   exciterre: { name: "Exciterre", type: "Sol", power: 30, accuracy: 0.88, text: "Le sol tremble sous l'excès de jouissance." },
-  attackaboul: { name: "Attack'a'boul", type: "Sol", power: 16, accuracy: 0.95, text: "Snoopy fourre son unique boule dans la bouche de l'adversaire." },
+  attackaboul: { name: "Attack'a'boul", type: "Ténèbres", power: 16, accuracy: 0.95, text: "Snoopy fourre son unique boule dans la bouche de l'adversaire." },
   //Abdelkrim
-  camouflage: { name: "Camouflage", type: "Eau", power: 0, effect: { dodgeNext: true, buffSpeed: 1 }, text: "L'utilisateur esquive la prochaine attaque." },
-  agripage: { name: "Agripage", type: "Combat", power: 20, accuracy: 0.95, effect: { debuffSpeed: 1, chance: 0.25 }, text: "Une saisie pénible qui casse le rythme." },
-  renforcementCaudal: { name: "Renforcement Caudal", type: "Normal", power: 0, effect: { buffAttack: 1, buffDefense: 1 }, text: "La queue repousse, plus solide que jamais." },
-  albineau: { name: "Albineau", type: "Eau", power: 20, accuracy: 0.96, effect: { priority: 1, buffSpeed: 1 }, text: "Un jet d'eau ultra rapide." },
+  Squattage: { name: "Squattage", type: "Vol", power: 5, effect: { dodgeNext: true, buffSpeed: 1 }, text: "L'utilisateur esquive la prochaine attaque." },
+  Biflette: { name: "Biflette", type: "Combat", power: 25, accuracy: 0.95, effect: { debuffSpeed: 1, chance: 0.25 }, text: "Une saisie pénible qui casse le rythme." },
+  BritMila: { name: "BritMila", type: "Normal", power: 0, effect: { buffAttack: 2, buffDefense: 2 }, text: "La queue repousse, plus solide que jamais." },
+  albineau: { name: "Albineau", type: "Eau", power: 25, accuracy: 0.96, effect: { priority: 1, buffSpeed: 2 }, text: "Un jet d'eau ultra rapide." },
   //Millie
   caressemoi: { name: "Caresse-moi", type: "Normal", power: 0, accuracy: 0.96, effect: { status: "paralyze", chance: 0.3 }, text: "L'adversaire est absorbé par le poil soyeux de cette chienne." },
   alopek: { name: "Alopek", type: "Acier", power: 0, effect: { buffAttack: 1, buffSpeed: 1, debuffDefenseSelf: 1 }, text: "Perd ses poils pour plus de vivacité." },
@@ -193,17 +193,17 @@ export const MOVES = {
 };
 
 export const CREATURES = {
-  nala: { id: "nala", name: "Nala", title: "La Chienasse", type: "Feu", hp: 110, attack: 26, defense: 18, speed: 22, moves: ["feuroce", "magmattack", "tempeteAntonienne", "sterilRez"], image: "./assets/creatures/nala_feu.png", glyph: "NA" },
-  snoopy: { id: "snoopy", name: "Snoopy", title: "Le Chien Soleil", type: "Sol", hp: 126, attack: 26, defense: 26, speed: 26, moves: ["galichage", "ronflement", "exciterre", "attackaboul"], image: "./assets/creatures/Snoopy_sol.png", glyph: "SN" },
-  abdelkrim: { id: "abdelkrim", name: "Abdelkrim", title: "Le Gay KO", type: "Eau", hp: 98, attack: 21, defense: 16, speed: 27, moves: ["camouflage", "agripage", "renforcementCaudal", "albineau"], image: "./assets/creatures/ABDELKRIMMM-export.png", glyph: "AB" },
-  millie: { id: "millie", name: "Millie", title: "La chauve capée", type: "Acier", hp: 100, attack: 24, defense: 20, speed: 23, moves: ["caressemoi", "alopek", "morsure", "coussinacier"], image: "./assets/creatures/Mili_mili_nananana.png", glyph: "MI" },
-  lapiteub: { id: "lapiteub", name: "Lapiteub", title: "Top Dildo Samantha", type: "Acier", hp: 102, attack: 23, defense: 21, speed: 16, moves: ["queueDeFer", "croutesDeNathan", "coupDeQueue", "biflEclair"], image: "./assets/creatures/Lapiteub-export.png", glyph: "LP" },
-  arketron: { id: "arketron", name: "Arketron", title: "Le délice d'Isaac", type: "Vol", hp: 98, attack: 22, defense: 15, speed: 24, moves: ["chiasseSupersonique", "typhonDeChiasse", "merdoku", "cacaOcurry"], image: "./assets/creatures/Arketron.png", glyph: "AR" },
-  pipalabita: { id: "pipalabita", name: "Pipalabita", title: "Fille chaude de ta région", type: "Poison", hp: 92, attack: 20, defense: 15, speed: 26, moves: ["tempeteBisous", "galichage", "gorgeAbyssale", "petDeFouf"], image: "./assets/creatures/Pipalabita-export-export.png", glyph: "PI" },
-  chorizobs: { id: "chorizobs", name: "Chorizobs", title: "La spéciale Dave", type: "Feu", hp: 104, attack: 25, defense: 17, speed: 20, moves: ["etouffeTete", "moussalait", "pedodance", "tresSale"], image: "./assets/creatures/Los_Chorizobes.png", glyph: "CH" },
-  bousillaflor: { id: "bousillaflor", name: "Bousillaflor", title: "La maman la plus bousillée", type: "Plante", hp: 108, attack: 24, defense: 18, speed: 18, moves: ["graineDeSemence", "sadomaxo", "lancemerde", "fouetLiane"], image: "./assets/creatures/Bousillaflore.png", glyph: "BO" },
-  tentafluide: { id: "tentafluide", name: "Tentafluide", title: "Sérieux ?", type: "Eau", hp: 70, attack: 30, defense: 20, speed: 17, moves: ["calinadeInfernale", "fontaineDeSemence", "dixMilleAnsDeSouffrance", "sauceRevigorante"], image: "./assets/creatures/tentafluide.png", glyph: "TE" },
-  reichix: { id:"reichix", name: "Reichix", title:"Nazi Prime 40", type: "Feu", hp: 130, attack: 12, defense: 30, speed: 5, moves: ["alliance", "crematorium", "gazattack", "milisse"], image: "./assets/creatures/Reichix-export.png", glyph: "RE" }
+  nala: { id: "nala", name: "Nala", title: "La Chienasse", type: "Feu", hp: 110, attack: 30, defense: 18, speed: 20, moves: ["feuroce", "magmattack", "tempeteAntonienne", "sterilRez"], image: "./assets/creatures/nala_feu.png", glyph: "NA" },
+  snoopy: { id: "snoopy", name: "Snoopy", title: "Le Chien Soleil", type: "Sol", hp: 96, attack: 26, defense: 26, speed: 26, moves: ["galichage", "ronflement", "exciterre", "attackaboul"], image: "./assets/creatures/Snoopy_sol.png", glyph: "SN" },
+  abdelkrim: { id: "abdelkrim", name: "Abdelkrim", title: "Le Gay KO", type: "Eau", hp: 86, attack: 23, defense: 16, speed: 27, moves: ["camouflage", "agripage", "renforcementCaudal", "albineau"], image: "./assets/creatures/ABDELKRIMMM-export.png", glyph: "AB" },
+  millie: { id: "millie", name: "Millie", title: "La chauve capée", type: "Acier", hp: 104, attack: 24, defense: 24, speed: 23, moves: ["caressemoi", "alopek", "morsure", "coussinacier"], image: "./assets/creatures/Mili_mili_nananana.png", glyph: "MI" },
+  lapiteub: { id: "lapiteub", name: "Lapiteub", title: "Top Dildo Samantha", type: "Acier", hp: 120, attack: 18, defense: 26, speed: 10, moves: ["queueDeFer", "croutesDeNathan", "coupDeQueue", "biflEclair"], image: "./assets/creatures/Lapiteub-export.png", glyph: "LP" },
+  arketron: { id: "arketron", name: "Arketron", title: "Le délice d'Isaac", type: "Vol", hp: 98, attack: 25, defense: 15, speed: 30, moves: ["chiasseSupersonique", "typhonDeChiasse", "merdoku", "cacaOcurry"], image: "./assets/creatures/Arketron.png", glyph: "AR" },
+  pipalabita: { id: "pipalabita", name: "Pipalabita", title: "Fille chaude de ta région", type: "Poison", hp: 100, attack: 22, defense: 24, speed: 15, moves: ["tempeteBisous", "galichage", "gorgeAbyssale", "petDeFouf"], image: "./assets/creatures/Pipalabita-export-export.png", glyph: "PI" },
+  chorizobs: { id: "chorizobs", name: "Chorizobs", title: "La spéciale Dave", type: "Feu", hp: 108, attack: 25, defense: 19, speed: 20, moves: ["etouffeTete", "moussalait", "pedodance", "tresSale"], image: "./assets/creatures/Los_Chorizobes.png", glyph: "CH" },
+  bousillaflor: { id: "bousillaflor", name: "Bousillaflor", title: "La maman la plus bousillée", type: "Plante", hp: 118, attack: 24, defense: 24, speed: 8, moves: ["graineDeSemence", "sadomaxo", "lancemerde", "fouetLiane"], image: "./assets/creatures/Bousillaflore.png", glyph: "BO" },
+  tentafluide: { id: "tentafluide", name: "Tentafluide", title: "Sérieux ?", type: "Eau", hp: 113, attack: 28, defense: 20, speed: 17, moves: ["calinadeInfernale", "fontaineDeSemence", "dixMilleAnsDeSouffrance", "sauceRevigorante"], image: "./assets/creatures/tentafluide.png", glyph: "TE" },
+  reichix: { id:"reichix", name: "Reichix", title:"Nazi Prime '40", type: "Feu", hp: 139, attack: 15, defense: 39, speed: 5, moves: ["alliance", "crematorium", "gazattack", "milisse"], image: "./assets/creatures/Reichix-export.png", glyph: "RE" }
 };
 
 export const PLAYABLE_CREATURE_IDS = Object.freeze(Object.keys(CREATURES));
