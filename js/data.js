@@ -125,9 +125,9 @@ export const WORLD = {
 
 export const MOVES = {
   //Nala
-  feuroce: { name: "Feuroce", type: "Feu", power: 18, accuracy: 0.95, effect: { debuffAttack: 1, chance: 0.35 }, text: "Une onde brûlante qui intimide la cible." },
+  feuroce: { name: "Feuroce", type: "Feu", power: 20, accuracy: 0.95, effect: { debuffAttack: 1, chance: 0.35 }, text: "Une onde brûlante qui intimide la cible." },
   magmattack: { name: "Magmattack", type: "Feu", power: 26, accuracy: 0.9, text: "Nala fonce dans un panache de braises." },
-  tempeteAntonienne: { name: "Tempête Antonienne", type: "Feu", power: 34, accuracy: 0.82, effect: { recoil: 6 }, text: "Une énorme explosion dramatique." },
+  tempeteAntonienne: { name: "Tempête Antonienne", type: "Feu", power: 42, accuracy: 0.80, effect: { recoil: 6 }, text: "Une énorme explosion dramatique." },
   sterilRez: { name: "Sterilrez", type: "Feu", power: 0, effect: { heal: 24, buffDefense: 1 }, text: "Nala se renforce et regagne des PV." },
   //Snoopy
   galichage: { name: "Galichage", type: "Eau", power: 24, accuracy: 0.92, effect: { buffSpeed: 1 }, text: "Snoopy embrasse goulument son adversaire" },
@@ -195,7 +195,7 @@ export const MOVES = {
 export const CREATURES = {
   nala: { id: "nala", name: "Nala", title: "La Chienasse", type: "Feu", hp: 110, attack: 30, defense: 18, speed: 20, moves: ["feuroce", "magmattack", "tempeteAntonienne", "sterilRez"], image: "./assets/creatures/nala_feu.png", glyph: "NA" },
   snoopy: { id: "snoopy", name: "Snoopy", title: "Le Chien Soleil", type: "Sol", hp: 96, attack: 26, defense: 26, speed: 26, moves: ["galichage", "ronflement", "exciterre", "attackaboul"], image: "./assets/creatures/Snoopy_sol.png", glyph: "SN" },
-  abdelkrim: { id: "abdelkrim", name: "Abdelkrim", title: "Le Gay KO", type: "Eau", hp: 86, attack: 23, defense: 16, speed: 27, moves: ["camouflage", "agripage", "renforcementCaudal", "albineau"], image: "./assets/creatures/ABDELKRIMMM-export.png", glyph: "AB" },
+  abdelkrim: { id: "abdelkrim", name: "Abdelkrim", title: "Le Gay KO", type: "Eau", hp: 86, attack: 23, defense: 16, speed: 27, moves: ["Squattage", "Biflette", "BritMila", "albineau"], image: "./assets/creatures/ABDELKRIMMM-export.png", glyph: "AB" },
   millie: { id: "millie", name: "Millie", title: "La chauve capée", type: "Acier", hp: 104, attack: 24, defense: 24, speed: 23, moves: ["caressemoi", "alopek", "morsure", "coussinacier"], image: "./assets/creatures/Mili_mili_nananana.png", glyph: "MI" },
   lapiteub: { id: "lapiteub", name: "Lapiteub", title: "Top Dildo Samantha", type: "Acier", hp: 120, attack: 18, defense: 26, speed: 10, moves: ["queueDeFer", "croutesDeNathan", "coupDeQueue", "biflEclair"], image: "./assets/creatures/Lapiteub-export.png", glyph: "LP" },
   arketron: { id: "arketron", name: "Arketron", title: "Le délice d'Isaac", type: "Vol", hp: 98, attack: 25, defense: 15, speed: 30, moves: ["chiasseSupersonique", "typhonDeChiasse", "merdoku", "cacaOcurry"], image: "./assets/creatures/Arketron.png", glyph: "AR" },
